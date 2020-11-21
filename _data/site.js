@@ -1,4 +1,7 @@
+const env = require('./env.js')
+const config = require('./config.json')
+
 module.exports = {
-  "url": process.env.URL || "",
-  "baseurl": process.env.BASE_URL || ""
+  ...env,
+  ...config,
 }

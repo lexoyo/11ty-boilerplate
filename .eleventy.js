@@ -1,10 +1,12 @@
+const site =  require('./_data/site.js')
+
 module.exports = function(eleventyConfig) {
 
   // plugins
   const sitemap = require("@quasibit/eleventy-plugin-sitemap")
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
-      hostname: "https://internet2000.net",
+      hostname: site.url + site.baseurl,
     },
   })
 
@@ -22,8 +24,7 @@ module.exports = function(eleventyConfig) {
   // other config
   return {
     dir: {
-      layouts: '_layouts',
-      includes: '_includes',
+      layouts: '_layouts', // for now stastic and Silex publish only there
     },
   }
 }

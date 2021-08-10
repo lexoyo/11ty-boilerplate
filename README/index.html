@@ -1,0 +1,21 @@
+<p><a href="https://github.com/lexoyo/11ty-boilerplate">This repository</a> is a template you can use to create a site with <a href="https://11ty.dev">11ty</a> and <a href="https://www.silex.me">Silex website builder</a> with the Stastic instance provided by <a href="https://internet2000.net">Internet 2000 agency</a> (more <a href="http://silex.me/instances/#list">info about this fork of Silex here</a>)</p>
+<p>It conains an action to deploy on github pages automatically</p>
+<p>Here is how to start:</p>
+<ol>
+<li>Fork <a href="https://github.com/lexoyo/11ty-boilerplate">this repository</a> or click &quot;use this template&quot; (/!\ be sure to select &quot;Include all branches&quot;)</li>
+<li>[If you host on github pages] Create a <a href="https://github.com/settings/tokens">deploy token here</a> with the access write <code>public_repo</code>. <a href="../../settings/secrets/actions/new">Then go to the settings of the website, in the &quot;secret&quot; section create a new secret</a>, call it <code>DEPLOY_TOKEN</code> and paste the token as its value</li>
+<li>[Or if you deploy to Netlify] Add the repo to Netlify as a new website</li>
+<li>[If you host on github pages] <a href="../../settings/secrets/actions/new">In the settings of the website, &quot;secret&quot; section, create a new secret</a>, call it <code>BASE_URL</code> and set its value to the name of your repository (e.g. <code>11ty-boilerplate</code>)</li>
+<li>Create a website with <a href="https://design.stastic.net/">Stastic designer</a> based on any template</li>
+<li>Publish your site from Stastic designer to github as 11ty layout</li>
+<li>Edit the file <a href="./index.md">index.md</a>, add <code>layout: YOUR_PAGE_NAME_IN_STASTIC</code> in the front matter like this:</li>
+</ol>
+<pre><code class="language-md">---
+permalink: /
+layout: home
+---
+
+any content here
+
+don't forget to replace `home` with the page name in Stastic
+</code></pre>
